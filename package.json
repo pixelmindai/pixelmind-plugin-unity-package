@@ -1,0 +1,33 @@
+{
+  "name": "ai.330.pixelmindgenerator",
+  "version": "1.0.0",
+  "displayName": "Pixelmind Generator",
+  "description": "This is an example package",
+  "unity": "2019.1",
+  "dependencies": {
+    
+  },
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "ai"
+  ],
+  "author": {
+    "name": "Unity",
+    "email": "unity@example.com",
+    "url": "https://www.unity3d.com"
+  },
+  "samples": [
+    {
+      "displayName": "Assets",
+      "description": "Contains sample assets",
+      "path": "Samples~/Assets"
+    },
+    {
+      "displayName": "Scenes",
+      "description": "Contains sample scenes",
+      "path": "Samples~/Scenes"
+    }
+  ]
+}
