@@ -279,9 +279,9 @@ public class PixelmindGenerator : MonoBehaviour
             return;
         }
 
-        if (!AssetDatabase.IsValidFolder("Assets/Pixelmind Generated Assets"))
+        if (!AssetDatabase.IsValidFolder("Assets/Pixelmind SDK Assets"))
         {
-            AssetDatabase.CreateFolder("Assets", "Pixelmind Generated Assets");
+            AssetDatabase.CreateFolder("Assets", "Pixelmind SDK Assets");
         }
 
         var maxLength = 20;
@@ -301,7 +301,7 @@ public class PixelmindGenerator : MonoBehaviour
             var modifiedTextureName = counter == 0 ? textureName : textureName + "_" + counter;
             var modifiedSpriteName = counter == 0 ? spriteName : spriteName + "_" + counter;
 
-            var textureAssets = AssetDatabase.FindAssets(modifiedTextureName, new[] { "Assets/Pixelmind Generated Assets" });
+            var textureAssets = AssetDatabase.FindAssets(modifiedTextureName, new[] { "Assets/Pixelmind SDK Assets" });
             
             if (textureAssets.Length > 0)
             {
@@ -309,8 +309,8 @@ public class PixelmindGenerator : MonoBehaviour
                 continue;
             }
 
-            AssetDatabase.CreateAsset(texture, "Assets/Pixelmind Generated Assets/" + modifiedTextureName + ".asset");
-            AssetDatabase.CreateAsset(sprite, "Assets/Pixelmind Generated Assets/" + modifiedSpriteName + ".asset");
+            AssetDatabase.CreateAsset(texture, "Assets/Pixelmind SDK Assets/" + modifiedTextureName + ".asset");
+            AssetDatabase.CreateAsset(sprite, "Assets/Pixelmind SDK Assets/" + modifiedSpriteName + ".asset");
             break;
         }
         

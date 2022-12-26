@@ -1,6 +1,6 @@
-# Pixelmind Generator
+# Pixelmind SDK
 
-Unity package that allow you to generate infinite game assets using AI.
+Unity package that allows you to generate infinite game assets using AI.
 
 ## Install
 
