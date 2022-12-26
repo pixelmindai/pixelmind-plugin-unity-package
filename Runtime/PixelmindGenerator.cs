@@ -26,10 +26,8 @@ public class PixelmindGenerator : MonoBehaviour
     [Tooltip("The result image")]
     [SerializeField]
     public Texture2D resultImage;
-
-    [Tooltip("The result image (preview)")]
+    
     public Texture2D previewImage { get; set; }
-
     public List<GeneratorField> generatorFields = new List<GeneratorField>();
     public List<Generator> generators = new List<Generator>();
     public string[] generatorOptions;
