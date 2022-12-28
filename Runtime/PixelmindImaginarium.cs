@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PixelmindImaginarium;
+using PixelmindSDK;
 using UnityEditor;
 using UnityEngine;
 
-public class PixelmindGenerator : MonoBehaviour
+public class PixelmindImaginarium : MonoBehaviour
 {
     [Tooltip("API Key from Pixelmind")]
     [SerializeField]

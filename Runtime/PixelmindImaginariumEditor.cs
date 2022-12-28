@@ -1,11 +1,11 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace PixelmindImaginarium
+namespace PixelmindSDK
 {
 #if UNITY_EDITOR
-    [CustomEditor(typeof(PixelmindGenerator))]
-    public class PixelmindGeneratorEditor : Editor
+    [CustomEditor(typeof(PixelmindImaginarium))]
+    public class PixelmindImaginariumEditor : Editor
     {
         private SerializedProperty assignToMaterial;
         private SerializedProperty assignToSpriteRenderer;
@@ -41,7 +41,7 @@ namespace PixelmindImaginarium
 
             serializedObject.Update();
 
-            var pixelmindGenerator = (PixelmindGenerator)target;
+            var pixelmindImaginarium = (PixelmindImaginarium)target;
 
             showApi = EditorGUILayout.Foldout(showApi, "Api");
 
@@ -67,13 +67,13 @@ namespace PixelmindImaginarium
                 {
                     if (GUILayout.Button("Get Generators"))
                     {
-                        _ = pixelmindGenerator.GetGeneratorsWithFields();
+                        _ = pixelmindImaginarium.GetGeneratorsWithFields();
                     }
 
                     // Iterate over generator fields and render them in the GUI
-                    if (pixelmindGenerator.generatorFields.Count > 0)
+                    if (pixelmindImaginarium.generatorFields.Count > 0)
                     {
-                        RenderEditorFields(pixelmindGenerator);
+                        RenderEditorFields(pixelmindImaginarium);
                     }
                 }
 
@@ -81,20 +81,20 @@ namespace PixelmindImaginarium
 
                 if (showGenerationButtons)
                 {
-                    if (pixelmindGenerator.PercentageCompleted() >= 0 && pixelmindGenerator.PercentageCompleted() < 100)
+                    if (pixelmindImaginarium.PercentageCompleted() >= 0 && pixelmindImaginarium.PercentageCompleted() < 100)
                     {
-                        if (GUILayout.Button("Cancel (" + pixelmindGenerator.PercentageCompleted() + "%)"))
+                        if (GUILayout.Button("Cancel (" + pixelmindImaginarium.PercentageCompleted() + "%)"))
                         {
-                            pixelmindGenerator.Cancel();
+                            pixelmindImaginarium.Cancel();
                         }
                     }
                     else
                     {
                         if (GUILayout.Button("Generate"))
                         {
-                            _ = pixelmindGenerator.InitializeGeneration(
-                                pixelmindGenerator.generatorFields,
-                                pixelmindGenerator.generators[pixelmindGenerator.generatorOptionsIndex].generator
+                            _ = pixelmindImaginarium.InitializeGeneration(
+                                pixelmindImaginarium.generatorFields,
+                                pixelmindImaginarium.generators[pixelmindImaginarium.generatorOptionsIndex].generator
                             );
                         }
                     }
@@ -105,28 +105,28 @@ namespace PixelmindImaginarium
                 if (showOutput)
                 {
                     EditorGUILayout.PropertyField(resultImage);
-                    if (pixelmindGenerator.previewImage != null) GUILayout.Box(pixelmindGenerator.previewImage);
+                    if (pixelmindImaginarium.previewImage != null) GUILayout.Box(pixelmindImaginarium.previewImage);
                 }
             }
 
             serializedObject.ApplyModifiedProperties();
         }
 
-        private void RenderEditorFields(PixelmindGenerator pixelmindGenerator)
+        private void RenderEditorFields(PixelmindImaginarium pixelmindImaginarium)
         {
             EditorGUI.BeginChangeCheck();
 
-            pixelmindGenerator.generatorOptionsIndex = EditorGUILayout.Popup(
-                pixelmindGenerator.generatorOptionsIndex,
-                pixelmindGenerator.generatorOptions
+            pixelmindImaginarium.generatorOptionsIndex = EditorGUILayout.Popup(
+                pixelmindImaginarium.generatorOptionsIndex,
+                pixelmindImaginarium.generatorOptions
             );
 
             if (EditorGUI.EndChangeCheck())
             {
-                pixelmindGenerator.GetGeneratorFields(pixelmindGenerator.generatorOptionsIndex);
+                pixelmindImaginarium.GetGeneratorFields(pixelmindImaginarium.generatorOptionsIndex);
             }
 
-            foreach (var field in pixelmindGenerator.generatorFields)
+            foreach (var field in pixelmindImaginarium.generatorFields)
             {
                 // Begin horizontal layout
                 EditorGUILayout.BeginHorizontal();

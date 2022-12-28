@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c37ee5440861a47884a14ba990aa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 'MGBAFuziaP6htHpFBShes1mFna7sV4VOFXQPQ9xrI980EbfWoqAPTp8nQaGH '
+  apiKey: ' '
   enableGUI: 0
   assignToSpriteRenderer: 1
   assignToMaterial: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c37ee5440861a47884a14ba990aa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 'MGBAFuziaP6htHpFBShes1mFna7sV4VOFXQPQ9xrI980EbfWoqAPTp8nQaGH '
+  apiKey: ' '
   enableGUI: 0
   assignToSpriteRenderer: 0
   assignToMaterial: 1
@@ -481,8 +481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apiSecretKey: 
-  imagineIds: 
-  previousImagineCount: 0
 --- !u!1 &1407676404
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c37ee5440861a47884a14ba990aa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 'MGBAFuziaP6htHpFBShes1mFna7sV4VOFXQPQ9xrI980EbfWoqAPTp8nQaGH '
+  apiKey: ' '
   enableGUI: 0
   assignToSpriteRenderer: 1
   assignToMaterial: 0

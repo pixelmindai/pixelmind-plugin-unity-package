@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace PixelmindImaginarium
+namespace PixelmindSDK
 {
     public class UnityWebRequestAwaiter : INotifyCompletion
     {
