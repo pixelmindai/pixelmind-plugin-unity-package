@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace PixelmindImaginarium
+namespace PixelmindSDK
 {
     public class ApiRequests
     {

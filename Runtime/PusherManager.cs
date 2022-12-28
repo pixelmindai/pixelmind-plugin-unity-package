@@ -1,3 +1,4 @@
+#if PUSHER_PRESENT // compile only is pusher package is installed
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -67,13 +68,13 @@ public class PusherManager : MonoBehaviour
     {
         if (imagineIds.Count != previousImagineCount)
         {
-            var pixelmindGenerators = FindObjectsOfType<PixelmindGenerator>();
+            var pixelmindImaginariums = FindObjectsOfType<PixelmindImaginarium>();
 
-            foreach (var pixelmindGenerator in pixelmindGenerators)
+            foreach (var pixelmindImaginarium in pixelmindImaginariums)
             {
-                if (imagineIds.Last() == pixelmindGenerator.imagineId)
+                if (imagineIds.Last() == pixelmindImaginarium.imagineId)
                 {
-                    _ = pixelmindGenerator.GetAssets();
+                    _ = pixelmindImaginarium.GetAssets();
                 }
             }
 
@@ -136,3 +137,4 @@ public class PusherResponseData
     public int id { get; set; }
 }
 
+#endif

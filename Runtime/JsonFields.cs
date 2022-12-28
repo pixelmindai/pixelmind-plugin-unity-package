@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PixelmindImaginarium
+namespace PixelmindSDK
 {
     [System.Serializable]
     public class CreateImagineResult
