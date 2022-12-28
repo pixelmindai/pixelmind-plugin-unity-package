@@ -163,7 +163,13 @@ public class PixelmindGenerator : MonoBehaviour
             percentageCompleted = 33;
             CalculateProgress();
 
-            var pusherManager = FindObjectOfType<PusherManager>();
+            var pusherManager = false;
+            
+            #if PUSHER_PRESENT
+            
+            pusherManager = FindObjectOfType<PusherManager>();
+            
+            #endif
 
             if (
                 !pusherManager || 

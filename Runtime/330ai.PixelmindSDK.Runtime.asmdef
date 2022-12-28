@@ -9,6 +9,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.pusher.pusherwebsocketunity",
+            "expression": "2.1.0",
+            "define": "PUSHER_PRESENT"
+        }
+    ],
     "noEngineReferences": false
 }
