@@ -39,6 +39,8 @@ and for Pixelmind SDK the default one will do the trick:
 
 `https://github.com/pixelmindai/pixelmind-plugin-unity-package.git`
 
+For known issues after installation check the section [below](#known-issues).
+
 ## Getting Started
 
 ### Samples
@@ -83,12 +85,24 @@ disabled Cube object. You can interact with each of those objects in a similar f
 4. You'll notice that the object has an option `Assign to Material` ticked. Leave it as it is.
 5. Following the same set of instructions as for the sprite, you can generate a texture that will now replace a material of the 3D object like the sample cube.
 
-### Runtime
+#### Runtime
 
-1. Click on the 'Enable GUI' button
-2. Use the in-game form the same way as mentioned above in the editor section.
+To be able to generate assets on Runtime you just need to follow these simple steps:
 
+1. Select the game object with the attached component of `Pixelmind Imaginarium`.
+2. Add your Pixelmind's `public` API key in the designated field 
+3. Click on the 'Enable GUI' button
+4. After you run the game a GUI will appear on top of your Game view.
+5. Use the GUI in the same manner as you would in the editor (`Get Generators > Enter Prompt > Generate`).
 
+### Known Issues
+
+If you are using an optional Pusher package, after installation on 2021.x.x versions you might get an error saying:
+
+`Assembly 'Packages/com.pusher.pusherwebsocketunity/Packages/PusherClient.2.1.0/lib/net472/PusherClient.dll' will not be loaded due to errors:
+PusherClient references strong named Newtonsoft.Json Assembly references: 12.0.0.0 Found in project: 13.0.0.0.`
+
+To resolve the issue go to `Edit > Project Settings > Player > Other Settings > Configuration > Assembly Version Validation` and disable Version Validation.
 
 
 
